@@ -1,0 +1,2 @@
+# Dstack test task
+
