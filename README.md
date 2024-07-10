@@ -19,6 +19,10 @@ it creates it using the given AWS credentials
 
 * Windows
 
+`python main.py --docker-image python --aws-cloudwatch-group test-task-group-1 --aws-cloudwatch-stream test-task-stream-1 --aws-access-key-id ... --aws-secret-access-key ... --aws-region us-west-2 --bash-command "pip install pip -U && pip install tqdm && python -c 'import time;print(123)'"`
+
+*Notice:* On Windows there are problems with escaping, so it’s better to use `;` instead of `\n` and spaces instead of `\t`
+
 ## Args
 
 | Argument                  | Description                                     |
@@ -30,3 +34,9 @@ it creates it using the given AWS credentials
 | `--aws-access-key-id`     | An AWS access key ID                            |
 | `--aws-secret-access-key` | An AWS secret access key                        |
 | `--aws-region`            | A name of an AWS region                         |
+
+
+## Notice
+
+I used python library `boto3` instead of docker default log driver,
+because on Windows AWS CloudWatch doesn't work well.
