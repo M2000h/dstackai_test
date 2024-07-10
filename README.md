@@ -7,9 +7,9 @@ it creates it using the given AWS credentials
 
 ## Setup
 
-1. Install python
+1. Install Python
 2. Install Docker
-3. Run `pip install -r requirments` 
+3. Run `pip install -r requirments.txt` 
 
 ## Run
 
