@@ -21,7 +21,7 @@ it creates it using the given AWS credentials
 
 `python main.py --docker-image python --aws-cloudwatch-group test-task-group-1 --aws-cloudwatch-stream test-task-stream-1 --aws-access-key-id ... --aws-secret-access-key ... --aws-region us-west-2 --bash-command "pip install pip -U && pip install tqdm && python -c 'import time;print(123)'"`
 
-*Notice:* On Windows there are problems with escaping, so it’s better to use `;` instead of `\n` and spaces instead of `\t`
+**Notice:** On Windows there are problems with escaping, so it’s better to use `;` instead of `\n` and spaces instead of `\t`
 
 ## Args
 
