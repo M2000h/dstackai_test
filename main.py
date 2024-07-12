@@ -21,6 +21,7 @@ args = parser.parse_args()
 
 
 def run():
+    last_ts = int(time.time())
     container = Container(args.docker_image)
     container.run(args.bash_command)
 
@@ -34,7 +35,6 @@ def run():
         args.aws_cloudwatch_stream
     )
 
-    last_ts = int(time.time())
     while True:
         container.container.reload()
         container_status = container.container.status
@@ -52,9 +52,9 @@ def run():
             if "409 Client Error" in str(e):
                 # Container has stopped
                 break
-        time.sleep(1)
         if container_status == "exited":
             break
+        time.sleep(1)
     logger.info(f"Container {container.container.id} has stopped")
 
 
