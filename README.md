@@ -18,8 +18,10 @@ Run script with following command:
 `python main.py --docker-image python --aws-cloudwatch-group test-task-group-1 --aws-cloudwatch-stream test-task-stream-1 --aws-access-key-id ... --aws-secret-access-key ... --aws-region us-west-2 --bash-command "pip install pip -U && pip install tqdm && python -c "python -c 'import time;print(123);time.sleep(5)'""`
 
 **Notice 1:** There are problems with escaping, so it’s better to use `;` instead of `\n` and spaces instead of `\t`
+
 **Notice 2:** In some cases there are problems with pulling the docker image, in which case you need to download 
 it manually: `docker pull python`
+
 **Notice 3:** The script supports creating new groups and streams, but apparently due to access restrictions, recording 
 only works in test-task-group-1 and test-task-stream-1
 
