@@ -19,11 +19,11 @@ Run script with following command:
 
 **Notice 1:** There are problems with escaping, so it’s better to use `;` instead of `\n` and spaces instead of `\t`
 
-**Notice 2:** In some cases there are problems with pulling the docker image, in which case you need to download 
+**Notice 2:** In some cases there are problems with pulling the docker image, in that case you need to pull 
 it manually: `docker pull python`
 
 **Notice 3:** The script supports creating new groups and streams, but apparently due to access restrictions, recording 
-only works in test-task-group-1 and test-task-stream-1
+only works in `test-task-group-1` and `test-task-stream-1`
 
 ## Args
 
