@@ -6,6 +6,8 @@ import time
 from awslogs import LogsUploader
 from container import Container
 
+TIME_INTERVAL = 1  # secs
+
 logger = logging.getLogger()
 logging.basicConfig(level=logging.INFO)
 
@@ -54,7 +56,7 @@ def run():
                 break
         if container_status == "exited":
             break
-        time.sleep(1)
+        time.sleep(TIME_INTERVAL)
     logger.info(f"Container {container.container.id} has stopped")
 
 
